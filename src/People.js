@@ -10,7 +10,7 @@ export function People() {
   return (
     <>
      {people.map(person => <section key={person.id}>
-        <img src={person.image} alt="first" />
+        {person.image?<img src={person.image} alt="first" />: null}
         <h2>{person.first} {person.last}</h2>
         <p>{person.notes}</p>
       </section>)}
